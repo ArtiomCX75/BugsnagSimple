@@ -114,18 +114,22 @@ public class EventMenu extends Menu {
 	}
 
 	public boolean isValid(String str) {
-		if (str.isEmpty())
+		try {
+			if (str.isEmpty())
+				return false;
+			if (new Integer(str) == 0)
+				return true;
+			if (new Integer(str) == 1)
+				return true;
+			if (str.length() != 3)
+				return false;
+			if ((str.substring(0, 1).equals("0")) | (str.substring(0, 1).equals("1")))
+				if ((str.substring(1, 2).equals("0")) | (str.substring(1, 2).equals("1")))
+					if ((str.substring(2, 3).equals("0")) | (str.substring(2, 3).equals("1")))
+						return true;
+		} catch (Exception e) {
 			return false;
-		if (new Integer(str) == 0)
-			return true;
-		if (new Integer(str) == 1)
-			return true;
-		if (str.length() != 3)
-			return false;
-		if ((str.substring(0, 1).equals("0")) | (str.substring(0, 1).equals("1")))
-			if ((str.substring(1, 2).equals("0")) | (str.substring(1, 2).equals("1")))
-				if ((str.substring(2, 3).equals("0")) | (str.substring(2, 3).equals("1")))
-					return true;
+		}
 		return false;
 	}
 

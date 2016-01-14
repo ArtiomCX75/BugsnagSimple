@@ -25,7 +25,7 @@
 						<descriptorRef>jar-with-dependencies</descriptorRef>
 					</descriptorRefs>
 					<outputDirectory>${basedir}</outputDirectory>
-					<finalName>Bugsnag_simple</finalName>
+					<finalName>BugsnagSimple</finalName>
 					<appendAssemblyId>false</appendAssemblyId>
 					<archive>
 						<manifest>
